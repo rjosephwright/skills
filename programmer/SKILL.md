@@ -35,6 +35,7 @@ describes the development process is a bug. So:
   refactor", "TODO when we finish migrating").
 - Do not address the reviewer or the task ("addresses #123", "for the new auth
   flow", "as discussed").
+- Do not add "section" comments, e.g. `// ----- Tests -----`.
 
 The test for whether a comment belongs in the code: imagine someone reading the
 file two years from now with no knowledge of the change that introduced it.
