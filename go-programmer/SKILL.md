@@ -148,9 +148,9 @@ Run these from the module root:
 
 Before committing, ensure the following:
 - Tests must pass before commiting. This includes unit AND integration tests.
-- Ensure code follows step 1. However, if code outside of the git working tree
-  is changed by this, do not commit it. A separate formatting commit should be
-  done to reformat the remainder of the code.
+- Ensure code follows code formatting rules from step 1. However, if code outside
+  of the git working tree is changed by this, do not commit it. A separate
+  formatting commit should be done to reformat the remainder of the code.
 - Code should pass the linter. Only fix code in the working tree that fails the
   linter for this commit. A separate commit should fix linting issues outside
   the working tree.
