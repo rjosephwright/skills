@@ -4643,10 +4643,10 @@ Date:   Fri Sep 30 20:25:16 2022 -0400
 ```
 
 Make a note of **forbidden words and phrases**:
-  - wire up/in
+  - wire/wired (as in "wired up" or "wired in")
   - surface (as a verb)
   - load-bearing
-  - land/landed
+  - land/lands/landed
   - shape/shaped
   - phases -- Do not discuss project "phases".
 
@@ -4687,17 +4687,16 @@ Model the message on this voice (from the user's own commit history):
 Rules:
 
 - Follow the Linux kernel style for line length (summary 50 chars, body 72).
-- Is a summary alone sufficient? Ask yourself if there is a significant "why"
-  that can't be answered from the summary alone. If so, provide a body. But
-  you're **not** writing a novel. If you feel the need to add 10 different
-  details, maybe it should be 10 commits instead? AND FOLLOW THE COMMIT VOICE
-  OUTLINED IN STEP 2.
+- Is a summary alone sufficient? Ask yourself if the subject line is enough
+  to know what changed when investigating later, or if there is a significant
+  "why" that can't be answered from the subject line alone.
 - **Subject line**: imperative, present tense, plain English. Explain *what*
-  changed in terms a new teammate would understand. No conventional-commit.
-  prefixes (`feat:`, `fix:`). No bullet points. No trailing period.
-- **Body** (optional): the *why* -- motivation, context, trade-offs. Do not
-  restate the diff. Use for anything that wouldn't be obvious from reading the
-  changed files.
+  changed in terms a new teammate would understand. No conventional-commit
+  prefixes (`feat:`, `fix:`). No trailing period.
+- **Body** (optional): the *details* if the subject line alone cannot cover it.
+  Does it need this at all? This isn't the documentation; the log is mainly to
+  determine what changed later and when. If a body is provided, optimize for
+  clear readability, avoiding lots of punctuation and noise. And **ELI5**.
 - **No emoji, no non-ASCII.** Keep everything ASCII.
 - **No forbidden words.** Re-check the word list from Step 2 against the
   message itself.
@@ -4705,7 +4704,11 @@ Rules:
 
 Show the full message to the user and wait for confirmation before committing.
 
-## Step 6: Commit
+## Step 6: Double check the commit message
+
+Is it ELI5?
+
+## Step 7: Commit
 
 Run `git add` for the specific files that belong in this commit (never `git add
 -A` or `git add .` -- those can pick up secrets or binaries). Then:
