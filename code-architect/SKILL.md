@@ -1,5 +1,5 @@
 ---
-name: code-reviewer
+name: code-architect
 description: Search a code change if given, or an entire codebase for bugs, performance issues, architectural weakness, or style inconsistencies. Use this when the user explicitly asks for review, the prompt mentions review or uses language like "take a look at this", or it is the start of a new session and the user wants to know what to do next.
 ---
 
